@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikasi Tabungan</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Catatan Tabungan</h2>
+        <button id="mode-toggle">🌙</button>
+
+        <div class="form-container">
+            <input type="text" id="deskripsi" placeholder="Deskripsi">
+            <input type="date" id="tanggal">
+            
+            <div class="nominal-container">
+                <button class="nominal-btn" data-value="10000">Rp 10.000</button>
+                <button class="nominal-btn" data-value="50000">Rp 50.000</button>
+                <button class="nominal-btn" data-value="100000">Rp 100.000</button>
+            </div>
+
+            <button class="tambah-btn" onclick="tambahData()">Tambah</button>
+        </div>
+
+        <div class="dropdown">
+            <button class="dropdown-toggle">Tampilkan Data ▼</button>
+            <div class="dropdown-content">
+                <div class="table-container">
+                    <table id="data-table">
+                        <thead>
+                            <tr>
+                                <th>No</th>
+                                <th>Deskripsi</th>
+                                <th>Tanggal</th>
+                                <th>Nominal</th>
+                                <th>Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <h3>Total Saldo: <span id="saldoAkhir">Rp 0</span></h3>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
