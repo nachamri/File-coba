@@ -1,0 +1,127 @@
+/* Gaya dasar */
+body {
+    font-family: Arial, sans-serif;
+    padding-top: 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+/* Container utama */
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Tombol mode gelap */
+#mode-toggle {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+/* Form input */
+.form-container input, .tambah-btn {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+/* Tombol nominal */
+.nominal-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.nominal-btn {
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    background: lightblue;
+    transition: transform 0.2s;
+}
+
+.nominal-btn.active {
+    background: darkblue;
+    color: white;
+    transform: scale(1.1);
+}
+
+/* Tombol tambah */
+.tambah-btn {
+    background: green;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+/* Efek tombol tambah */
+.tambah-btn:hover {
+    transform: scale(1.05);
+}
+
+/* Dropdown */
+.dropdown {
+    margin-top: 20px;
+}
+
+.dropdown-toggle {
+    width: 100%;
+    padding: 10px;
+    background: gray;
+    color: white;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.dropdown.active .dropdown-content {
+    display: block;
+}
+
+/* Tabel */
+.table-container {
+    max-height: 300px;
+    overflow-y: auto;
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+/* Media Queries untuk tampilan mobile */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    .nominal-container {
+        flex-direction: column;
+    }
+
+    .nominal-btn {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+}
